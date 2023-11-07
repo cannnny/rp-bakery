@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
 body {
-  max-width: 1200px;
+  max-width: 1440px;
   color: #664b30;
   font-family: "Zen Maru Gothic", serif;
 }
@@ -45,6 +45,7 @@ header .sp-navi ul {
   display: flex;
   font-size: 12px;
   list-style: none;
+  padding-left: 0px;
 }
 
 header .sp-navi ul li {
@@ -207,24 +208,20 @@ header .sp-navi .header__button {
 }
 
 .pickup .swiper .swiper-button-prev,
-.pickup .swiper .swiper-button-next::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-}
-
-.pickup .swiper .swiper-button-prev {
-  background-color: #664b30;
-  height: calc(30px / 2 * tan(60deg));
-  width: 20px;
-  clip-path: polygon(0 50%, 100% 0, 100% 100%);
-}
-
 .pickup .swiper .swiper-button-next {
   background-color: #664b30;
   height: calc(30px / 2 * tan(60deg));
   width: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 0;
+}
+
+.pickup .swiper .swiper-button-prev {
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+
+.pickup .swiper .swiper-button-next {
   clip-path: polygon(0 0, 0 100%, 100% 50%);
 }
 
