@@ -6,6 +6,10 @@
     <title>THE BAKERY</title>
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
@@ -14,8 +18,8 @@
       </h1>
       <div class="sp-navi">
         <ul>
+          <li>商品紹介</li>
           <li>店舗一覧</li>
-          <li>秘密</li>
           <li>採用情報</li>
         </ul>
         <button class="header__button">その他</button>
@@ -92,22 +96,52 @@
       </div>
       <div class="pickup">
         <h2>Pickup</h2>
-        <div class="swiper"></div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/img/pickup-01.png" alt="採用情報" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/img/pickup-02.png" alt="商品情報" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/pickup-03.png" alt="店舗情報" />
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
     </div>
     <footer>
-      <div class="footer__memu">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+      <div class="footer__wrapper">
+        <div class="footer__memu">
+          <ul>
+            <li>お知らせ</li>
+            <li>商品紹介</li>
+            <li>
+              店舗一覧
+              <ul class="shops">
+                <li>本店</li>
+                <li>▲▲店</li>
+                <li>□□店</li>
+              </ul>
+            </li>
+            <li>採用情報</li>
+          </ul>
+        </div>
+        <div class="contact">
+          <div class="contact__map">
+            <img src="img/map.png" alt="地図" />
+          </div>
+          <div>本社:東京都〇〇区〇〇町〇-〇</div>
+          <div>TEL:〇〇-〇〇〇〇-〇〇〇〇</div>
+        </div>
       </div>
-      <div class="contact"></div>
       <div class="up-button"></div>
-      <div class="copyright"></div>
+      <div class="copyright">©️THE BAKERY</div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/index.js"></script>
   </body>
 </html>

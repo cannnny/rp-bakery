@@ -72,6 +72,7 @@ header {
 
   .img {
     position: relative;
+
     &::before {
       content: "";
       display: block;
@@ -180,9 +181,109 @@ header {
           content: "#";
           display: block;
           position: absolute;
-          left: 0px;
+          left: 0;
         }
       }
     }
+  }
+}
+
+// pickup
+.pickup {
+  padding: 25px;
+
+  .swiper {
+    margin-top: 25px;
+    position: relative;
+
+    .swiper-wrapper {
+      width: 100%;
+      height: 100%;
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          border-radius: 5%;
+        }
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
+
+    .swiper-button-prev {
+      background-color: #664b30;
+      height: calc(30px / 2 * tan(60deg));
+      width: 20px;
+      clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    }
+
+    .swiper-button-next {
+      background-color: #664b30;
+      height: calc(30px / 2 * tan(60deg));
+      width: 20px;
+      clip-path: polygon(0 0, 0 100%, 100% 50%);
+    }
+  }
+}
+
+// footer
+footer {
+  padding: 25px 30px 10px 30px;
+  margin-top: 25px;
+  background-color: #664b30;
+  color: #fff;
+
+  .footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .footer__memu {
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          margin: 10px;
+          font-size: 18px;
+        }
+
+        .shops {
+          li {
+            position: relative;
+            font-size: 14px;
+            margin-left: 30px;
+
+            &::before {
+              content: "-";
+              position: absolute;
+              display: block;
+              left: -10px;
+            }
+          }
+        }
+      }
+    }
+
+    .contact {
+      font-size: 14px;
+
+      .contact__map {
+        max-width: 200px;
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 25px;
+    text-align: center;
   }
 }
