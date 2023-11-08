@@ -2,6 +2,7 @@
 body {
   max-width: 1440px;
   color: #664b30;
+  line-height: 1.5;
   font-family: "Zen Maru Gothic", serif;
 }
 
@@ -37,6 +38,10 @@ h2 {
 
 header {
   position: relative;
+}
+
+.header-flex {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,47 +50,47 @@ header {
 }
 
 @media screen and (min-width: 1024px) {
-  header {
+  .header-flex {
     flex-direction: column;
     padding-top: 25px;
     padding-bottom: 0;
   }
 }
 
-header img {
+.header-flex img {
   display: block;
   max-width: 140px;
 }
 
 @media screen and (min-width: 1024px) {
-  header img {
+  .header-flex img {
     max-width: 250px;
   }
 }
 
-header .sp-navi {
+.header-flex .sp-navi {
   display: flex;
   align-items: center;
 }
 
 @media screen and (min-width: 1024px) {
-  header .sp-navi {
+  .header-flex .sp-navi {
     display: none;
   }
 }
 
-header .sp-navi ul {
+.header-flex .sp-navi ul {
   display: flex;
   font-size: 12px;
   list-style: none;
   padding-left: 0px;
 }
 
-header .sp-navi ul li {
+.header-flex .sp-navi ul li {
   margin-left: 8px;
 }
 
-header .sp-navi #header__button {
+.header-flex .sp-navi #header__button {
   width: 60px;
   height: 40px;
   margin-left: 10px;
@@ -96,12 +101,30 @@ header .sp-navi #header__button {
   cursor: pointer;
 }
 
-header #sp-menu {
+.header-flex .pc-navi {
   display: none;
 }
 
-header #sp-menu.active {
-  animation: slideIn 0.5s;
+@media screen and (min-width: 1024px) {
+  .header-flex .pc-navi {
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .header-flex .pc-navi ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+  }
+  .header-flex .pc-navi ul li + li {
+    padding-left: 20px;
+  }
+}
+
+#sp-menu {
+  transform: translateX(-100%);
+  transition: all 0.5s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,13 +132,13 @@ header #sp-menu.active {
   height: 100vh;
   background-color: #664b30;
   color: #fff;
-  position: absolute;
+  position: fixed;
   z-index: 99;
   top: 0;
   left: 0;
 }
 
-header #sp-menu.active ul {
+#sp-menu ul {
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -126,7 +149,7 @@ header #sp-menu.active ul {
   text-align: center;
 }
 
-header #sp-menu.active button {
+#sp-menu button {
   width: 85%;
   height: 40px;
   border-radius: 10%;
@@ -135,41 +158,15 @@ header #sp-menu.active button {
   font-size: 16px;
 }
 
-header #sp-menu.active button + button {
+#sp-menu button + button {
   margin-top: 20px;
   border: 1px solid #fff;
   background-color: #664b30;
   color: #ffffff;
 }
 
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-header .pc-navi {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  header .pc-navi {
-    display: block;
-    margin-top: 10px;
-    font-size: 20px;
-  }
-  header .pc-navi ul {
-    display: flex;
-    justify-content: center;
-    padding-left: 0;
-    list-style: none;
-  }
-  header .pc-navi ul li + li {
-    padding-left: 20px;
-  }
+#sp-menu.active {
+  transform: translateX(0%);
 }
 
 .mv {
@@ -240,7 +237,7 @@ header .pc-navi {
 @media screen and (min-width: 1024px) {
   .topics ul {
     width: 50%;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 
@@ -252,7 +249,6 @@ header .pc-navi {
 @media screen and (min-width: 1024px) {
   .topics ul li {
     display: flex;
-    align-items: center;
     margin-top: 20px;
   }
 }
@@ -265,6 +261,7 @@ header .pc-navi {
 
 @media screen and (min-width: 1024px) {
   .topics ul li .topic__info {
+    align-items: flex-start;
     margin-top: 0;
     margin-left: 20px;
   }
@@ -285,7 +282,6 @@ header .pc-navi {
   margin-left: 10px;
   padding: 2px;
   font-size: 12px;
-  width: fit-content;
   flex-shrink: 0;
 }
 
@@ -446,8 +442,8 @@ footer .footer__wrapper .contact .contact__map {
 }
 
 footer .pageup-button {
-  position: fixed;
-  width: 65px;
+  position: absolute;
+  width: 55px;
   right: 20px;
   bottom: 20px;
   z-index: 98;
