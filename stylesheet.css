@@ -29,6 +29,7 @@ header {
   align-items: center;
   padding: 15px;
   background-color: #fff;
+  position: relative;
 }
 
 @media screen and (min-width: 1024px) {
@@ -72,7 +73,7 @@ header .sp-navi ul li {
   margin-left: 8px;
 }
 
-header .sp-navi .header__button {
+header .sp-navi #header__button {
   width: 60px;
   height: 40px;
   margin-left: 10px;
@@ -81,6 +82,61 @@ header .sp-navi .header__button {
   font-size: 12px;
   border: none;
   cursor: pointer;
+}
+
+header #sp-menu {
+  display: none;
+}
+
+header #sp-menu.active {
+  animation: slideIn 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #664b30;
+  color: #fff;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+}
+
+header #sp-menu.active ul {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 150px;
+  list-style: none;
+  padding-left: 0;
+  margin: 80px 0;
+  text-align: center;
+}
+
+header #sp-menu.active button {
+  width: 85%;
+  height: 40px;
+  border-radius: 10%;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+header #sp-menu.active button + button {
+  margin-top: 20px;
+  border: 1px solid #fff;
+  background-color: #664b30;
+  color: #ffffff;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 header .pc-navi {
@@ -143,7 +199,7 @@ header .pc-navi {
 .mv .mv__text {
   width: 90%;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 10px;
   text-align: center;
   font-size: 28px;
 }
@@ -336,7 +392,7 @@ footer .pageup-button {
   width: 65px;
   right: 20px;
   bottom: 20px;
-  z-index: 99;
+  z-index: 98;
 }
 
 footer .copyright {
