@@ -34,6 +34,8 @@ header {
 @media screen and (min-width: 1024px) {
   header {
     flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 0;
   }
 }
 
@@ -44,7 +46,7 @@ header img {
 
 @media screen and (min-width: 1024px) {
   header img {
-    max-width: 200px;
+    max-width: 250px;
   }
 }
 
@@ -107,6 +109,12 @@ header .pc-navi {
   background-color: #fdede4;
 }
 
+@media screen and (min-width: 1024px) {
+  .mv {
+    padding: 40px 0;
+  }
+}
+
 .mv .img {
   position: relative;
 }
@@ -127,7 +135,7 @@ header .pc-navi {
 
 @media screen and (min-width: 1024px) {
   .mv .img {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
   }
 }
@@ -138,6 +146,13 @@ header .pc-navi {
   padding-top: 20px;
   text-align: center;
   font-size: 28px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mv .mv__text {
+    font-size: 40px;
+    padding-top: 0;
+  }
 }
 
 .topics {

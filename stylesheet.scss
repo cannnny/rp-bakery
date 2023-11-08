@@ -37,6 +37,8 @@ header {
 
   @include mq() {
     flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 0;
   }
 
   img {
@@ -44,7 +46,7 @@ header {
     max-width: 140px;
 
     @include mq() {
-      max-width: 200px;
+      max-width: 250px;
     }
   }
 
@@ -106,6 +108,10 @@ header {
   padding: 20px 0;
   background-color: #fdede4;
 
+  @include mq() {
+    padding: 40px 0;
+  }
+
   .img {
     position: relative;
 
@@ -124,7 +130,7 @@ header {
     }
 
     @include mq() {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
     }
   }
@@ -135,6 +141,11 @@ header {
     padding-top: 20px;
     text-align: center;
     font-size: 28px;
+
+    @include mq() {
+      font-size: 40px;
+      padding-top: 0;
+    }
   }
 }
 
