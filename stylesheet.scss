@@ -277,6 +277,7 @@ footer {
   margin-top: 25px;
   background-color: #664b30;
   color: #fff;
+  position: relative;
 
   .footer__wrapper {
     display: flex;
@@ -317,6 +318,14 @@ footer {
         max-width: 200px;
       }
     }
+  }
+
+  .pageup-button {
+    position: fixed;
+    width: 65px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99;
   }
 
   .copyright {

@@ -276,6 +276,7 @@ footer {
   margin-top: 25px;
   background-color: #664b30;
   color: #fff;
+  position: relative;
 }
 
 footer .footer__wrapper {
@@ -313,6 +314,14 @@ footer .footer__wrapper .contact {
 
 footer .footer__wrapper .contact .contact__map {
   max-width: 200px;
+}
+
+footer .pageup-button {
+  position: fixed;
+  width: 65px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
 }
 
 footer .copyright {

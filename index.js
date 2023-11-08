@@ -1,3 +1,4 @@
+// swiper
 const swiper = new Swiper(".swiper", {
   slidesPerView: 1,
   centeredSlides: true,
@@ -6,3 +7,9 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+// pageScrollToTop
+const element = document.getElementById("header");
+const pageScrollToTop = () => {
+  element.scrollIntoView({ behavior: "smooth" });
+};
