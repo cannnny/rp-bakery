@@ -31,14 +31,32 @@ header {
   background-color: #fff;
 }
 
+@media screen and (min-width: 1024px) {
+  header {
+    flex-direction: column;
+  }
+}
+
 header img {
   display: block;
   max-width: 140px;
 }
 
+@media screen and (min-width: 1024px) {
+  header img {
+    max-width: 200px;
+  }
+}
+
 header .sp-navi {
   display: flex;
   align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  header .sp-navi {
+    display: none;
+  }
 }
 
 header .sp-navi ul {
@@ -63,6 +81,27 @@ header .sp-navi .header__button {
   cursor: pointer;
 }
 
+header .pc-navi {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  header .pc-navi {
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  header .pc-navi ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+  }
+  header .pc-navi ul li + li {
+    padding-left: 20px;
+  }
+}
+
 .mv {
   padding: 20px 0;
   background-color: #fdede4;
@@ -84,6 +123,13 @@ header .sp-navi .header__button {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .mv .img {
+    max-width: 800px;
+    margin: 0 auto;
+  }
 }
 
 .mv .mv__text {

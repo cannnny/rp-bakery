@@ -1,3 +1,5 @@
+@import "_mq.scss";
+
 @import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
 
 // 全体
@@ -33,14 +35,26 @@ header {
   padding: 15px;
   background-color: #fff;
 
+  @include mq() {
+    flex-direction: column;
+  }
+
   img {
     display: block;
     max-width: 140px;
+
+    @include mq() {
+      max-width: 200px;
+    }
   }
 
   .sp-navi {
     display: flex;
     align-items: center;
+
+    @include mq() {
+      display: none;
+    }
 
     ul {
       display: flex;
@@ -62,6 +76,27 @@ header {
       font-size: 12px;
       border: none;
       cursor: pointer;
+    }
+  }
+
+  .pc-navi {
+    display: none;
+
+    @include mq() {
+      display: block;
+      margin-top: 10px;
+      font-size: 20px;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        list-style: none;
+
+        li + li {
+          padding-left: 20px;
+        }
+      }
     }
   }
 }
@@ -86,6 +121,11 @@ header {
       background-size: cover;
       background-repeat: no-repeat;
       z-index: 1;
+    }
+
+    @include mq() {
+      max-width: 800px;
+      margin: 0 auto;
     }
   }
 
