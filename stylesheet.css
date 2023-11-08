@@ -10,6 +10,12 @@ h2 {
   font-size: 28px;
 }
 
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
 .main__button {
   width: 100%;
   max-width: 385px;
@@ -23,13 +29,19 @@ h2 {
   color: #fff;
 }
 
+@media screen and (min-width: 1024px) {
+  .main__button {
+    margin-top: 40px;
+  }
+}
+
 header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
   background-color: #fff;
-  position: relative;
 }
 
 @media screen and (min-width: 1024px) {
@@ -212,6 +224,9 @@ header .pc-navi {
 }
 
 .topics {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   padding: 25px;
 }
 
@@ -222,9 +237,24 @@ header .pc-navi {
   list-style: none;
 }
 
+@media screen and (min-width: 1024px) {
+  .topics ul {
+    width: 50%;
+    margin-top: 40px;
+  }
+}
+
 .topics ul li {
   padding-bottom: 20px;
   border-bottom: 1px solid #fcdcca;
+}
+
+@media screen and (min-width: 1024px) {
+  .topics ul li {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
 }
 
 .topics ul li .topic__info {
@@ -233,8 +263,21 @@ header .pc-navi {
   margin-top: 20px;
 }
 
+@media screen and (min-width: 1024px) {
+  .topics ul li .topic__info {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+}
+
 .topics ul li .topic__info .topic__info__date {
   font-size: 11px;
+}
+
+@media screen and (min-width: 1024px) {
+  .topics ul li .topic__info .topic__info__date {
+    font-size: 14px;
+  }
 }
 
 .topics ul li .topic__info .topic__info__category {
@@ -242,10 +285,25 @@ header .pc-navi {
   margin-left: 10px;
   padding: 2px;
   font-size: 12px;
+  width: fit-content;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .topics ul li .topic__info .topic__info__category {
+    margin: 0 30px 0 15px;
+  }
 }
 
 .topics ul li .topic__title {
   margin-top: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  .topics ul li .topic__title {
+    margin-top: 0;
+    margin-left: 20px;
+  }
 }
 
 .column {
