@@ -118,14 +118,14 @@ header #sp-menu ul li {
   align-items: center;
 }
 
-header #sp-menu ul li img {
-  order: 1;
-  width: 100px;
-}
-
 header #sp-menu ul li div {
   order: 2;
   font-size: 18px;
+}
+
+header #sp-menu ul li img {
+  order: 1;
+  width: 100px;
 }
 
 header #sp-menu button {
@@ -206,6 +206,12 @@ header #sp-menu.active {
   padding: 25px;
 }
 
+@media screen and (min-width: 1024px) {
+  .topics {
+    padding: 40px;
+  }
+}
+
 .topics ul {
   width: 90%;
   padding-left: 0px;
@@ -252,7 +258,7 @@ header #sp-menu.active {
 
 @media screen and (min-width: 1024px) {
   .topics ul li .topic__info .topic__info__date {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -267,6 +273,7 @@ header #sp-menu.active {
 @media screen and (min-width: 1024px) {
   .topics ul li .topic__info .topic__info__category {
     margin: 0 30px 0 15px;
+    font-size: 14px;
   }
 }
 
@@ -278,15 +285,33 @@ header #sp-menu.active {
   .topics ul li .topic__title {
     margin-top: 0;
     margin-left: 20px;
+    font-size: 18px;
   }
 }
 
 .column {
-  background-color: #fdede4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 25px;
+  background-color: #fdede4;
 }
 
-.column .column-item {
+@media screen and (min-width: 1024px) {
+  .column {
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .column .column-flex {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.column .column-flex .column-item {
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -294,15 +319,21 @@ header #sp-menu.active {
   border-radius: 25px;
 }
 
-.column .column-item .column-item__thumbnail {
+@media screen and (min-width: 1024px) {
+  .column .column-flex .column-item {
+    width: 100%;
+  }
+}
+
+.column .column-flex .column-item .column-item__thumbnail {
   order: 1;
 }
 
-.column .column-item .column-item__thumbnail img {
+.column .column-flex .column-item .column-item__thumbnail img {
   border-radius: 25px 25px 0 0;
 }
 
-.column .column-item .column-item__text {
+.column .column-flex .column-item .column-item__text {
   order: 2;
   margin: 20px;
   padding-bottom: 30px;
@@ -310,7 +341,14 @@ header #sp-menu.active {
   display: inline-block;
 }
 
-.column .column-item ul {
+@media screen and (min-width: 1024px) {
+  .column .column-flex .column-item .column-item__text {
+    padding-bottom: 0px;
+    font-size: 18px;
+  }
+}
+
+.column .column-flex .column-item ul {
   order: 3;
   display: flex;
   flex-wrap: wrap;
@@ -320,17 +358,29 @@ header #sp-menu.active {
   color: #be8f68;
 }
 
-.column .column-item ul li {
+.column .column-flex .column-item ul li {
   position: relative;
   padding: 0 10px;
   margin-bottom: 5px;
 }
 
-.column .column-item ul li::before {
+.column .column-flex .column-item ul li::before {
   content: "#";
   display: block;
   position: absolute;
   left: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .column .column-flex .column-item ul li {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .column .column-flex .column-item + .column-item {
+    margin-left: 50px;
+  }
 }
 
 .pickup {
