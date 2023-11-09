@@ -1,0 +1,40 @@
+.pickup {
+  padding: 25px;
+
+  .swiper {
+    margin-top: 25px;
+    position: relative;
+
+    .swiper-wrapper {
+      width: 100%;
+      height: 100%;
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          border-radius: 5%;
+        }
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      background-color: #664b30;
+      height: calc(30px / 2 * tan(60deg));
+      width: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: 0;
+    }
+
+    .swiper-button-prev {
+      clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    }
+
+    .swiper-button-next {
+      clip-path: polygon(0 0, 0 100%, 100% 50%);
+    }
+  }
+}

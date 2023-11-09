@@ -1,0 +1,61 @@
+footer {
+  padding: 25px 30px 10px 30px;
+  margin-top: 25px;
+  background-color: #664b30;
+  color: #fff;
+  position: relative;
+
+  .footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .footer__memu {
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          margin: 10px;
+          font-size: 18px;
+        }
+
+        .shops {
+          li {
+            position: relative;
+            font-size: 14px;
+            margin-left: 30px;
+
+            &::before {
+              content: "-";
+              position: absolute;
+              display: block;
+              left: -10px;
+            }
+          }
+        }
+      }
+    }
+
+    .contact {
+      font-size: 14px;
+
+      .contact__map {
+        max-width: 200px;
+      }
+    }
+  }
+
+  .pageup-button {
+    position: absolute;
+    width: 55px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 98;
+  }
+
+  .copyright {
+    margin-top: 25px;
+    text-align: center;
+  }
+}

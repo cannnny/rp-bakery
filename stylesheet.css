@@ -1,46 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
-body {
-  max-width: 1440px;
-  color: #664b30;
-  line-height: 1.5;
-  font-family: "Zen Maru Gothic", serif;
-}
-
-h2 {
-  text-align: center;
-  font-size: 28px;
-}
-
-@media screen and (min-width: 1024px) {
-  h2 {
-    font-size: 40px;
-  }
-}
-
-.main__button {
-  width: 100%;
-  max-width: 385px;
-  height: 40px;
-  margin: 25px auto 0 auto;
-  cursor: pointer;
-  border: none;
-  border-radius: 20px;
-  font-size: 18px;
-  background-color: #664b30;
-  color: #fff;
-}
-
-@media screen and (min-width: 1024px) {
-  .main__button {
-    margin-top: 40px;
-  }
-}
-
 header {
   position: relative;
 }
 
-.header-flex {
+header .header-flex {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -50,47 +13,47 @@ header {
 }
 
 @media screen and (min-width: 1024px) {
-  .header-flex {
+  header .header-flex {
     flex-direction: column;
     padding-top: 25px;
     padding-bottom: 0;
   }
 }
 
-.header-flex img {
+header .header-flex img {
   display: block;
   max-width: 140px;
 }
 
 @media screen and (min-width: 1024px) {
-  .header-flex img {
+  header .header-flex img {
     max-width: 250px;
   }
 }
 
-.header-flex .sp-navi {
+header .header-flex .sp-navi {
   display: flex;
   align-items: center;
 }
 
 @media screen and (min-width: 1024px) {
-  .header-flex .sp-navi {
+  header .header-flex .sp-navi {
     display: none;
   }
 }
 
-.header-flex .sp-navi ul {
+header .header-flex .sp-navi ul {
   display: flex;
   font-size: 12px;
   list-style: none;
   padding-left: 0px;
 }
 
-.header-flex .sp-navi ul li {
+header .header-flex .sp-navi ul li {
   margin-left: 8px;
 }
 
-.header-flex .sp-navi #header__button {
+header .header-flex .sp-navi #header__button {
   width: 60px;
   height: 40px;
   margin-left: 10px;
@@ -101,28 +64,28 @@ header {
   cursor: pointer;
 }
 
-.header-flex .pc-navi {
+header .header-flex .pc-navi {
   display: none;
 }
 
 @media screen and (min-width: 1024px) {
-  .header-flex .pc-navi {
+  header .header-flex .pc-navi {
     display: block;
     margin-top: 10px;
     font-size: 20px;
   }
-  .header-flex .pc-navi ul {
+  header .header-flex .pc-navi ul {
     display: flex;
     justify-content: center;
     padding-left: 0;
     list-style: none;
   }
-  .header-flex .pc-navi ul li + li {
+  header .header-flex .pc-navi ul li + li {
     padding-left: 20px;
   }
 }
 
-#sp-menu {
+header #sp-menu {
   transform: translateX(-100%);
   transition: all 0.5s;
   display: flex;
@@ -138,7 +101,7 @@ header {
   left: 0;
 }
 
-#sp-menu ul {
+header #sp-menu ul {
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -149,23 +112,23 @@ header {
   text-align: center;
 }
 
-#sp-menu ul li {
+header #sp-menu ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#sp-menu ul li img {
+header #sp-menu ul li img {
   order: 1;
   width: 100px;
 }
 
-#sp-menu ul li div {
+header #sp-menu ul li div {
   order: 2;
   font-size: 18px;
 }
 
-#sp-menu button {
+header #sp-menu button {
   width: 85%;
   height: 40px;
   border-radius: 10%;
@@ -174,14 +137,14 @@ header {
   font-size: 16px;
 }
 
-#sp-menu button + button {
+header #sp-menu button + button {
   margin-top: 20px;
   border: 1px solid #fff;
   background-color: #664b30;
   color: #ffffff;
 }
 
-#sp-menu.active {
+header #sp-menu.active {
   transform: translateX(0%);
 }
 
@@ -468,4 +431,41 @@ footer .pageup-button {
 footer .copyright {
   margin-top: 25px;
   text-align: center;
+}
+
+body {
+  max-width: 1440px;
+  color: #664b30;
+  line-height: 1.5;
+  font-family: "Zen Maru Gothic", serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+}
+
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+.main__button {
+  width: 100%;
+  max-width: 385px;
+  height: 40px;
+  margin: 25px auto 0 auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  background-color: #664b30;
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .main__button {
+    margin-top: 40px;
+  }
 }
