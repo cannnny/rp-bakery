@@ -4,6 +4,10 @@
   flex-direction: column;
   padding: 25px;
 
+  @include mq() {
+    padding: 40px;
+  }
+
   ul {
     width: 90%;
     padding-left: 0px;
@@ -21,7 +25,6 @@
 
       @include mq() {
         display: flex;
-        // align-items: center;
         margin-top: 20px;
       }
 
