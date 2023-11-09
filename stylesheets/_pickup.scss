@@ -6,15 +6,19 @@
     position: relative;
 
     .swiper-wrapper {
-      width: 100%;
-      height: 100%;
+      width: 80%;
+      // height: 100%;
 
       .swiper-slide {
         display: flex;
         justify-content: center;
-        align-items: center;
+
         img {
           border-radius: 5%;
+
+          @include mq() {
+            zoom: 1.2;
+          }
         }
       }
     }

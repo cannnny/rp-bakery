@@ -343,18 +343,22 @@ header #sp-menu.active {
 }
 
 .pickup .swiper .swiper-wrapper {
-  width: 100%;
-  height: 100%;
+  width: 80%;
 }
 
 .pickup .swiper .swiper-wrapper .swiper-slide {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .pickup .swiper .swiper-wrapper .swiper-slide img {
   border-radius: 5%;
+}
+
+@media screen and (min-width: 1024px) {
+  .pickup .swiper .swiper-wrapper .swiper-slide img {
+    zoom: 1.2;
+  }
 }
 
 .pickup .swiper .swiper-button-prev,

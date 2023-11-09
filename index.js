@@ -16,10 +16,17 @@ menuButton.addEventListener("click", function () {
 // swiper
 const swiper = new Swiper(".swiper", {
   slidesPerView: 1,
-  centeredSlides: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    740: {
+      slidesPerView: 2,
+    },
+    1440: {
+      slidesPerView: 3,
+    },
   },
 });
 
