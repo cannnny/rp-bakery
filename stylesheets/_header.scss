@@ -1,15 +1,23 @@
 header {
-  position: relative;
+  height: 70px;
+  background-color: #ffffff;
+  z-index: 99;
+
+  @include mq() {
+    height: 180px;
+  }
 
   .header-flex {
-    position: relative;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
+    position: fixed;
     align-items: center;
     padding: 15px;
-    background-color: #fff;
+    background-color: #ffffff;
 
     @include mq() {
+      position: static;
       flex-direction: column;
       padding-top: 25px;
       padding-bottom: 0;

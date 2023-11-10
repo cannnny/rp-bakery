@@ -1,19 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
 header {
-  position: relative;
+  height: 70px;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    height: 180px;
+  }
 }
 
 header .header-flex {
-  position: relative;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
+  position: fixed;
   align-items: center;
   padding: 15px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 @media screen and (min-width: 1024px) {
   header .header-flex {
+    position: static;
     flex-direction: column;
     padding-top: 25px;
     padding-bottom: 0;
@@ -151,6 +161,8 @@ header #sp-menu.active {
 .mv {
   padding: 20px 0;
   background-color: #fdede4;
+  position: relative;
+  z-index: -1;
 }
 
 @media screen and (min-width: 1024px) {
@@ -174,7 +186,6 @@ header #sp-menu.active {
   background-image: url("img/frame.png");
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 1;
 }
 
 @media screen and (min-width: 1024px) {
@@ -295,6 +306,8 @@ header #sp-menu.active {
   justify-content: center;
   padding: 25px;
   background-color: #fdede4;
+  position: relative;
+  z-index: -1;
 }
 
 @media screen and (min-width: 1024px) {
@@ -529,7 +542,7 @@ footer .pageup-button {
   width: 55px;
   right: 20px;
   bottom: 20px;
-  z-index: 98;
+  z-index: 99;
 }
 
 @media screen and (min-width: 1024px) {
