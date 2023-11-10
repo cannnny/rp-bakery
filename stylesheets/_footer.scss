@@ -87,7 +87,6 @@ footer {
     width: 55px;
     right: 20px;
     bottom: 20px;
-    z-index: 99;
 
     @include mq() {
       width: 80px;
