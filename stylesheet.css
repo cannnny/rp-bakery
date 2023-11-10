@@ -557,7 +557,7 @@ footer .copyright {
 }
 
 body {
-  max-width: 1440px;
+  width: 100vw;
   color: #664b30;
   line-height: 1.5;
   font-family: "Zen Maru Gothic", serif;
