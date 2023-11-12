@@ -10,6 +10,9 @@ const noscroll = (e) => {
 headerButton.addEventListener("click", function () {
   spMenu.classList.toggle("active");
   spMenu.classList.remove("inactive");
+  headerButton.classList.toggle("active");
+  headerButton.classList.remove("inactive");
+
   document.addEventListener("touchmove", noscroll, { passive: false });
   document.addEventListener("wheel", noscroll, { passive: false });
 });
@@ -17,6 +20,9 @@ headerButton.addEventListener("click", function () {
 menuButton.addEventListener("click", function () {
   spMenu.classList.toggle("active");
   spMenu.classList.add("inactive");
+  headerButton.classList.toggle("active");
+  headerButton.classList.add("inactive");
+
   document.removeEventListener("touchmove", noscroll);
   document.removeEventListener("wheel", noscroll);
 });
