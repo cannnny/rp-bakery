@@ -39,7 +39,7 @@
           margin-left: 20px;
         }
 
-        .topic__info__date {
+        time {
           font-size: 11px;
 
           @include mq() {

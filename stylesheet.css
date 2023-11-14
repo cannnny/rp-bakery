@@ -11,7 +11,7 @@ header {
   }
 }
 
-header .header-flex {
+header .header__flex-container {
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -23,7 +23,7 @@ header .header-flex {
 }
 
 @media screen and (min-width: 1024px) {
-  header .header-flex {
+  header .header__flex-container {
     position: static;
     flex-direction: column;
     padding-top: 25px;
@@ -31,40 +31,40 @@ header .header-flex {
   }
 }
 
-header .header-flex img {
+header .header__flex-container img {
   display: block;
   max-width: 140px;
 }
 
 @media screen and (min-width: 1024px) {
-  header .header-flex img {
+  header .header__flex-container img {
     max-width: 250px;
   }
 }
 
-header .header-flex .sp-navi {
+header .header__flex-container .sp-navi {
   display: flex;
   align-items: center;
 }
 
 @media screen and (min-width: 1024px) {
-  header .header-flex .sp-navi {
+  header .header__flex-container .sp-navi {
     display: none;
   }
 }
 
-header .header-flex .sp-navi ul {
+header .header__flex-container .sp-navi ul {
   display: flex;
   font-size: 12px;
   list-style: none;
   padding-left: 0px;
 }
 
-header .header-flex .sp-navi ul li {
+header .header__flex-container .sp-navi ul li {
   margin-left: 8px;
 }
 
-header .header-flex .sp-navi #header__button {
+header .header__flex-container .sp-navi #header__button {
   position: relative;
   width: 60px;
   height: 40px;
@@ -76,7 +76,7 @@ header .header-flex .sp-navi #header__button {
   cursor: pointer;
 }
 
-header .header-flex .sp-navi #header__button .close {
+header .header__flex-container .sp-navi #header__button .close {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -86,7 +86,7 @@ header .header-flex .sp-navi #header__button .close {
   display: none;
 }
 
-header .header-flex .sp-navi #header__button .close::before, header .header-flex .sp-navi #header__button .close::after {
+header .header__flex-container .sp-navi #header__button .close::before, header .header__flex-container .sp-navi #header__button .close::after {
   content: "";
   display: block;
   background-color: #ffffff;
@@ -94,46 +94,46 @@ header .header-flex .sp-navi #header__button .close::before, header .header-flex
   height: 3px;
 }
 
-header .header-flex .sp-navi #header__button .close::before {
+header .header__flex-container .sp-navi #header__button .close::before {
   transform: translateY(13px) rotate(-45deg);
 }
 
-header .header-flex .sp-navi #header__button .close::after {
+header .header__flex-container .sp-navi #header__button .close::after {
   transform: translate(1px, 10px) rotate(45deg);
 }
 
-header .header-flex .sp-navi #header__button.active {
+header .header__flex-container .sp-navi #header__button.active {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-header .header-flex .sp-navi #header__button.active .text {
+header .header__flex-container .sp-navi #header__button.active .text {
   display: none;
 }
 
-header .header-flex .sp-navi #header__button.active .close {
+header .header__flex-container .sp-navi #header__button.active .close {
   display: block;
 }
 
-header .header-flex .pc-navi {
+header .header__flex-container .pc-navi {
   display: none;
 }
 
 @media screen and (min-width: 1024px) {
-  header .header-flex .pc-navi {
+  header .header__flex-container .pc-navi {
     display: block;
     margin-top: 10px;
     font-size: 20px;
   }
-  header .header-flex .pc-navi ul {
+  header .header__flex-container .pc-navi ul {
     display: flex;
     justify-content: center;
     padding-left: 0;
     list-style: none;
   }
-  header .header-flex .pc-navi ul li + li {
+  header .header__flex-container .pc-navi ul li + li {
     padding-left: 20px;
   }
 }
@@ -306,12 +306,12 @@ header #sp-menu.active {
   }
 }
 
-.topics ul li .topic__info .topic__info__date {
+.topics ul li .topic__info time {
   font-size: 11px;
 }
 
 @media screen and (min-width: 1024px) {
-  .topics ul li .topic__info .topic__info__date {
+  .topics ul li .topic__info time {
     font-size: 16px;
   }
 }
@@ -360,14 +360,14 @@ header #sp-menu.active {
 }
 
 @media screen and (min-width: 1024px) {
-  .column .column-flex {
+  .column .column__flex-container {
     display: flex;
     width: 80%;
     margin: 0 auto;
   }
 }
 
-.column .column-flex .column-item {
+.column .column__flex-container .column__item {
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -376,20 +376,20 @@ header #sp-menu.active {
 }
 
 @media screen and (min-width: 1024px) {
-  .column .column-flex .column-item {
+  .column .column__flex-container .column__item {
     width: 100%;
   }
 }
 
-.column .column-flex .column-item .column-item__thumbnail {
+.column .column__flex-container .column__item .column__item__thumbnail {
   order: 1;
 }
 
-.column .column-flex .column-item .column-item__thumbnail img {
+.column .column__flex-container .column__item .column__item__thumbnail img {
   border-radius: 25px 25px 0 0;
 }
 
-.column .column-flex .column-item .column-item__text {
+.column .column__flex-container .column__item .column__item__text {
   order: 2;
   margin: 20px;
   padding-bottom: 30px;
@@ -398,13 +398,13 @@ header #sp-menu.active {
 }
 
 @media screen and (min-width: 1024px) {
-  .column .column-flex .column-item .column-item__text {
+  .column .column__flex-container .column__item .column__item__text {
     padding-bottom: 0px;
     font-size: 18px;
   }
 }
 
-.column .column-flex .column-item ul {
+.column .column__flex-container .column__item ul {
   order: 3;
   display: flex;
   flex-wrap: wrap;
@@ -414,13 +414,13 @@ header #sp-menu.active {
   color: #be8f68;
 }
 
-.column .column-flex .column-item ul li {
+.column .column__flex-container .column__item ul li {
   position: relative;
   padding: 0 10px;
   margin-bottom: 5px;
 }
 
-.column .column-flex .column-item ul li::before {
+.column .column__flex-container .column__item ul li::before {
   content: "#";
   display: block;
   position: absolute;
@@ -428,13 +428,13 @@ header #sp-menu.active {
 }
 
 @media screen and (min-width: 1024px) {
-  .column .column-flex .column-item ul li {
+  .column .column__flex-container .column__item ul li {
     font-size: 18px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .column .column-flex .column-item + .column-item {
+  .column .column__flex-container .column__item + .column__item {
     margin-left: 50px;
   }
 }
@@ -616,7 +616,7 @@ h2 {
   }
 }
 
-.main__button {
+.section__button {
   width: 100%;
   max-width: 385px;
   height: 40px;
@@ -630,7 +630,7 @@ h2 {
 }
 
 @media screen and (min-width: 1024px) {
-  .main__button {
+  .section__button {
     margin-top: 40px;
   }
 }

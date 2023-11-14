@@ -11,14 +11,14 @@
     padding: 40px;
   }
 
-  .column-flex {
+  .column__flex-container {
     @include mq() {
       display: flex;
       width: 80%;
       margin: 0 auto;
     }
 
-    .column-item {
+    .column__item {
       @include mq() {
         width: 100%;
       }
@@ -29,7 +29,7 @@
       margin-top: 25px;
       border-radius: 25px;
 
-      .column-item__thumbnail {
+      .column__item__thumbnail {
         order: 1;
 
         img {
@@ -37,7 +37,7 @@
         }
       }
 
-      .column-item__text {
+      .column__item__text {
         order: 2;
         margin: 20px;
         padding-bottom: 30px;
@@ -78,7 +78,7 @@
       }
     }
 
-    .column-item + .column-item {
+    .column__item + .column__item {
       @include mq() {
         margin-left: 50px;
       }
