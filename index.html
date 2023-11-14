@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- 初期値だとenになってるのよくある。一応直す -->
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="これは練習用の模写ページです。" />
     <title>Delicious & Smile THE BAKERY(模写)</title>
+    <!-- ogp記述, ファビコン記述はだいたい必要。以下メジャーな記述 -->
+    <!-- meta(name="twitter:card", content="summary_large_image")
+    meta(property="og:url", content="https://dorara.netlify.com/")
+    meta(property="og:title", content="re_may")
+    meta(property="og:description", content="dorara's site ver3.")
+    meta(property="og:image", content="path/ogp.jpg")
+    meta(property="og:site_name", content="re_may")
+    meta(property="og:type", content="website") //トップはwebsite, トップ以外はarticle
+    link(rel="shortcut icon", href="/favicon.ico")
+    link(rel="apple-touch-icon-precomposed", href="/apple-touch-icon.png") -->
+
     <link rel="stylesheet" href="./reset.css" />
     <link
       rel="stylesheet"
@@ -15,7 +27,9 @@
   </head>
   <body>
     <header id="header">
+      <!-- ハイフン,アンダーバーの使い分けが統一されてない…? bemベースならheaderの子要素のflexならheader_flex -->
       <div class="header-flex">
+        <!-- bemベースならheader_flex_logo -->
         <h1 class="logo">
           <img src="./img/logo.jpg" alt="THE BAKERY" />
         </h1>
@@ -25,6 +39,7 @@
             <li>店舗一覧</li>
             <li>採用情報</li>
           </ul>
+          <!-- idの表記がclassっぽいのが見間違いリスクありそう。idはjs限定のものとして「js-header-button」とかおすすめ -->
           <button id="header__button">
             <span class="text">その他</span>
             <span class="close"></span>
@@ -54,10 +69,12 @@
             <img src="/img/icon-03.png" />
           </li>
         </ul>
+        <!-- ここでいきなりclass名長くなるの違和感。bemルール使うなら全部で使うor全く使わない。前述の通り「_」は「親_子供」という使い方なので、この構造なら「spMenu_btn-pageTop」「spMenu_btn-close」とか。「-」はモディファイアといってパターン違いを示す -->
         <button class="sp-menu__button__pagetop">トップページ</button>
         <button id="sp-menu__button__close">閉じる</button>
       </div>
     </header>
+    <!-- mainタグでもok。mainはheader,footer以外の部分すべてと考えて良い -->
     <div class="main">
       <div class="mv">
         <div class="img">
@@ -65,12 +82,15 @@
         </div>
         <div class="mv__text">美味しくて、"ほっ"とする。</div>
       </div>
+      <!-- h2を囲むのはsectionが推奨 -->
       <div class="topics">
         <h2>Topics</h2>
         <ul>
           <li>
             <div class="topic__info">
+              <!-- timeタグというのがある。日付系はそれでマークアップが推奨 -->
               <div class="topic__info__date">2023.11.06</div>
+              <!-- <time datetime="2023-11-06">2023.11.06</time> -->
               <div class="topic__info__category">お知らせ</div>
             </div>
             <div class="topic__title">
@@ -92,11 +112,13 @@
             </div>
           </li>
         </ul>
+        <!-- 「親_子供」なのでここでmain_btnは少し違和感。共通化したい意図なら、「section_btn」とか -->
         <button class="main__button">お知らせ一覧</button>
       </div>
       <div class="column">
         <h2>Column</h2>
         <div class="column-flex">
+          <!-- flex-itemというセットならul > liというマークアップもあり -->
           <div class="column-item">
             <div class="column-item__text">
               美味しいパンを作るために、スタッフが心がけていること。
