@@ -12,6 +12,8 @@
   }
 
   .column__flex-container {
+    padding-left: 0;
+
     @include mq() {
       display: flex;
       width: 80%;

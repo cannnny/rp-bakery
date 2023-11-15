@@ -64,7 +64,7 @@ header .header__flex-container .sp-navi ul li {
   margin-left: 8px;
 }
 
-header .header__flex-container .sp-navi #header__button {
+header .header__flex-container .sp-navi .header__button {
   position: relative;
   width: 60px;
   height: 40px;
@@ -76,7 +76,7 @@ header .header__flex-container .sp-navi #header__button {
   cursor: pointer;
 }
 
-header .header__flex-container .sp-navi #header__button .close {
+header .header__flex-container .sp-navi .header__button .close {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -86,7 +86,7 @@ header .header__flex-container .sp-navi #header__button .close {
   display: none;
 }
 
-header .header__flex-container .sp-navi #header__button .close::before, header .header__flex-container .sp-navi #header__button .close::after {
+header .header__flex-container .sp-navi .header__button .close::before, header .header__flex-container .sp-navi .header__button .close::after {
   content: "";
   display: block;
   background-color: #ffffff;
@@ -94,26 +94,26 @@ header .header__flex-container .sp-navi #header__button .close::before, header .
   height: 3px;
 }
 
-header .header__flex-container .sp-navi #header__button .close::before {
+header .header__flex-container .sp-navi .header__button .close::before {
   transform: translateY(13px) rotate(-45deg);
 }
 
-header .header__flex-container .sp-navi #header__button .close::after {
+header .header__flex-container .sp-navi .header__button .close::after {
   transform: translate(1px, 10px) rotate(45deg);
 }
 
-header .header__flex-container .sp-navi #header__button.active {
+header .header__flex-container .sp-navi .header__button.active {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-header .header__flex-container .sp-navi #header__button.active .text {
+header .header__flex-container .sp-navi .header__button.active .text {
   display: none;
 }
 
-header .header__flex-container .sp-navi #header__button.active .close {
+header .header__flex-container .sp-navi .header__button.active .close {
   display: block;
 }
 
@@ -138,7 +138,7 @@ header .header__flex-container .pc-navi {
   }
 }
 
-header #sp-menu {
+header .sp-menu {
   transform: translateX(-100%);
   transition: all 0.5s;
   display: flex;
@@ -154,7 +154,7 @@ header #sp-menu {
   left: 0;
 }
 
-header #sp-menu ul {
+header .sp-menu ul {
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -165,23 +165,23 @@ header #sp-menu ul {
   text-align: center;
 }
 
-header #sp-menu ul li {
+header .sp-menu ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-header #sp-menu ul li div {
+header .sp-menu ul li div {
   order: 2;
   font-size: 18px;
 }
 
-header #sp-menu ul li img {
+header .sp-menu ul li img {
   order: 1;
   width: 100px;
 }
 
-header #sp-menu button {
+header .sp-menu button {
   width: 85%;
   height: 40px;
   border-radius: 10%;
@@ -190,14 +190,14 @@ header #sp-menu button {
   font-size: 16px;
 }
 
-header #sp-menu button + button {
+header .sp-menu button + button {
   margin-top: 20px;
   border: 1px solid #fff;
   background-color: #664b30;
   color: #ffffff;
 }
 
-header #sp-menu.active {
+header .sp-menu.active {
   transform: translateX(0%);
 }
 
@@ -357,6 +357,10 @@ header #sp-menu.active {
   .column {
     padding: 40px;
   }
+}
+
+.column .column__flex-container {
+  padding-left: 0;
 }
 
 @media screen and (min-width: 1024px) {

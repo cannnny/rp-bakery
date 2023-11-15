@@ -1,7 +1,7 @@
 // sp-menu開閉,スクロール制御
-const headerButton = document.getElementById("header__button");
-const menuButton = document.getElementById("sp-menu__button__close");
-const spMenu = document.getElementById("sp-menu");
+const headerButton = document.getElementById("js-header-button");
+const menuButton = document.getElementById("js-button-close");
+const spMenu = document.getElementById("js-sp-menu");
 
 const noscroll = (e) => {
   e.preventDefault();

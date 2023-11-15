@@ -52,7 +52,7 @@ header {
         }
       }
 
-      #header__button {
+      .header__button {
         position: relative;
         width: 60px;
         height: 40px;
@@ -129,13 +129,12 @@ header {
     }
   }
 
-  #sp-menu {
+  .sp-menu {
     transform: translateX(-100%);
     transition: all 0.5s;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // heightからheaderの大きさを引きたい
     width: 100vw;
     height: 100vh;
     background-color: #664b30;

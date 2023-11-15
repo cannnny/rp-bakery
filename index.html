@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- 初期値だとenになってるのよくある。一応直す -->
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -7,17 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="これは練習用の模写ページです。" />
     <title>Delicious & Smile THE BAKERY(模写)</title>
-    <!-- ogp記述, ファビコン記述はだいたい必要。以下メジャーな記述 -->
-    <!-- meta(name="twitter:card", content="summary_large_image")
-    meta(property="og:url", content="https://dorara.netlify.com/")
-    meta(property="og:title", content="re_may")
-    meta(property="og:description", content="dorara's site ver3.")
-    meta(property="og:image", content="path/ogp.jpg")
-    meta(property="og:site_name", content="re_may")
-    meta(property="og:type", content="website") //トップはwebsite, トップ以外はarticle
-    link(rel="shortcut icon", href="/favicon.ico")
-    link(rel="apple-touch-icon-precomposed", href="/apple-touch-icon.png") -->
-
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content="https://rp-bakery.vercel.app/" />
+    <meta property="og:title" content="コーポレートサイト(模写)" />
+    <meta property="og:description" content="これは練習用の模写ページです。" />
+    <meta property="og:image" content="path/ogp.jpg" />
+    <meta property="og:site_name" content="コーポレートサイト(模写)" />
+    <meta property="og:type" content="website" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png" />
     <link rel="stylesheet" href="./reset.css" />
     <link
       rel="stylesheet"
@@ -29,7 +26,11 @@
     <header id="header">
       <div class="header__flex-container">
         <h1 class="logo">
-          <img src="./img/logo.jpg" alt="THE BAKERY" />
+          <img
+            src="img/logo.jpg"
+            alt="Delicious
+           & Smile THE BAKERY"
+          />
         </h1>
         <div class="sp-navi">
           <ul>
@@ -37,7 +38,7 @@
             <li>店舗一覧</li>
             <li>採用情報</li>
           </ul>
-          <button id="header__button">
+          <button id="js-header-button" class="header__button">
             <span class="text">その他</span>
             <span class="close"></span>
           </button>
@@ -51,23 +52,25 @@
           </ul>
         </div>
       </div>
-      <div id="sp-menu">
+      <div id="js-sp-menu" class="sp-menu">
         <ul>
           <li>
             <div>お知らせ</div>
-            <img src="/img/icon-01.png" />
+            <img src="img/icon-01.png" alt="" />
           </li>
           <li>
             <div>コラム</div>
-            <img src="/img/icon-02.png" />
+            <img src="img/icon-02.png" alt="" />
           </li>
           <li>
             <div>ピックアップ</div>
-            <img src="/img/icon-03.png" />
+            <img src="img/icon-03.png" alt="" />
           </li>
         </ul>
-        <button class="sp-menu__button__pagetop">トップページ</button>
-        <button id="sp-menu__button__close">閉じる</button>
+        <button class="sp-menu__button--pagetop">トップページ</button>
+        <button id="js-button-close" class="sp-menu__button--close">
+          閉じる
+        </button>
       </div>
     </header>
     <main>
@@ -82,7 +85,7 @@
         <ul>
           <li>
             <div class="topic__info">
-              <time datetime="2023.11.06">2023.11.06</time>
+              <time datetime="2023-11-06">2023.11.06</time>
               <div class="topic__info__category">お知らせ</div>
             </div>
             <div class="topic__title">
@@ -91,13 +94,13 @@
           </li>
           <li>
             <div class="topic__info">
-              <time datetime="2023.11.01">2023.11.01</time>
+              <time datetime="2023-11-01">2023.11.01</time>
             </div>
             <div class="topic__title">〇〇店　12月1日オープン！</div>
           </li>
           <li>
             <div class="topic__info">
-              <time datetime="2023.10.01">2023.10.01</time>
+              <time datetime="2023-10-01">2023.10.01</time>
             </div>
             <div class="topic__title">
               ハロウィン限定商品を販売します（~10/31）テストテストテストテストテストテストテストテストテストテストテストテストテスト
@@ -109,7 +112,6 @@
       <section class="column">
         <h2>Column</h2>
         <ul class="column__flex-container">
-          <!-- flex-itemというセットならul > liというマークアップもあり -->
           <li class="column__item">
             <div class="column__item__text">
               美味しいパンを作るために、スタッフが心がけていること。
@@ -149,10 +151,10 @@
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="/img/pickup-01.png" alt="採用情報" />
+              <img src="img/pickup-01.png" alt="採用情報" />
             </div>
             <div class="swiper-slide">
-              <img src="/img/pickup-02.png" alt="商品情報" />
+              <img src="img/pickup-02.png" alt="商品情報" />
             </div>
             <div class="swiper-slide">
               <img src="img/pickup-03.png" alt="店舗情報" />
@@ -189,11 +191,11 @@
         </div>
       </div>
       <div class="pageup-button" onclick="pageScrollToTop()">
-        <img src="/img/pageup-button.png" alt="" />
+        <img src="img/pageup-button.png" alt="" />
       </div>
       <div class="copyright">- copyright area -</div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/index.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
