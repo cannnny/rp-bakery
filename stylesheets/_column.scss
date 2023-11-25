@@ -11,7 +11,7 @@
     padding: 40px;
   }
 
-  .column__flex-container {
+  &__flex-container {
     padding-left: 0;
 
     @include mq() {
@@ -19,71 +19,73 @@
       width: 80%;
       margin: 0 auto;
     }
+  }
 
-    .column__item {
-      @include mq() {
-        width: 100%;
-      }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin-top: 25px;
+    border-radius: 25px;
 
-      display: flex;
-      flex-direction: column;
-      background-color: #fff;
-      margin-top: 25px;
-      border-radius: 25px;
+    @include mq() {
+      width: 100%;
+    }
+  }
 
-      .column__item__thumbnail {
-        order: 1;
+  &__item + &__item {
+    @include mq() {
+      margin-left: 50px;
+    }
+  }
 
-        img {
-          border-radius: 25px 25px 0 0;
-        }
-      }
+  &__text {
+    order: 2;
+    margin: 20px;
+    padding-bottom: 30px;
+    font-size: 16px;
+    display: inline-block;
 
-      .column__item__text {
-        order: 2;
-        margin: 20px;
-        padding-bottom: 30px;
-        font-size: 16px;
-        display: inline-block;
+    @include mq() {
+      padding-bottom: 0px;
+      font-size: 18px;
+    }
+  }
 
-        @include mq() {
-          padding-bottom: 0px;
-          font-size: 18px;
-        }
-      }
+  &__thumbnail {
+    order: 1;
 
-      ul {
-        order: 3;
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-        padding-left: 20px;
-        list-style: none;
-        color: #be8f68;
+    img {
+      border-radius: 25px 25px 0 0;
+    }
+  }
+}
 
-        li {
-          position: relative;
-          padding: 0 10px;
-          margin-bottom: 5px;
+.tag {
+  &__list {
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    list-style: none;
+    color: #be8f68;
+  }
 
-          &::before {
-            content: "#";
-            display: block;
-            position: absolute;
-            left: 0;
-          }
+  &__item {
+    position: relative;
+    padding: 0 10px;
+    margin-bottom: 5px;
 
-          @include mq() {
-            font-size: 18px;
-          }
-        }
-      }
+    @include mq() {
+      font-size: 18px;
     }
 
-    .column__item + .column__item {
-      @include mq() {
-        margin-left: 50px;
-      }
+    &::before {
+      content: "#";
+      display: block;
+      position: absolute;
+      left: 0;
     }
   }
 }

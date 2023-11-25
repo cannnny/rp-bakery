@@ -359,19 +359,19 @@
   }
 }
 
-.column .column__flex-container {
+.column__flex-container {
   padding-left: 0;
 }
 
 @media screen and (min-width: 1024px) {
-  .column .column__flex-container {
+  .column__flex-container {
     display: flex;
     width: 80%;
     margin: 0 auto;
   }
 }
 
-.column .column__flex-container .column__item {
+.column__item {
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -380,20 +380,18 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .column .column__flex-container .column__item {
+  .column__item {
     width: 100%;
   }
 }
 
-.column .column__flex-container .column__item .column__item__thumbnail {
-  order: 1;
+@media screen and (min-width: 1024px) {
+  .column__item + .column__item {
+    margin-left: 50px;
+  }
 }
 
-.column .column__flex-container .column__item .column__item__thumbnail img {
-  border-radius: 25px 25px 0 0;
-}
-
-.column .column__flex-container .column__item .column__item__text {
+.column__text {
   order: 2;
   margin: 20px;
   padding-bottom: 30px;
@@ -402,13 +400,21 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .column .column__flex-container .column__item .column__item__text {
+  .column__text {
     padding-bottom: 0px;
     font-size: 18px;
   }
 }
 
-.column .column__flex-container .column__item ul {
+.column__thumbnail {
+  order: 1;
+}
+
+.column__thumbnail img {
+  border-radius: 25px 25px 0 0;
+}
+
+.tag__list {
   order: 3;
   display: flex;
   flex-wrap: wrap;
@@ -418,29 +424,23 @@
   color: #be8f68;
 }
 
-.column .column__flex-container .column__item ul li {
+.tag__item {
   position: relative;
   padding: 0 10px;
   margin-bottom: 5px;
 }
 
-.column .column__flex-container .column__item ul li::before {
-  content: "#";
-  display: block;
-  position: absolute;
-  left: 0;
-}
-
 @media screen and (min-width: 1024px) {
-  .column .column__flex-container .column__item ul li {
+  .tag__item {
     font-size: 18px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .column .column__flex-container .column__item + .column__item {
-    margin-left: 50px;
-  }
+.tag__item::before {
+  content: "#";
+  display: block;
+  position: absolute;
+  left: 0;
 }
 
 .pickup {
