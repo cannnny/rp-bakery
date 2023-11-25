@@ -23,9 +23,9 @@
     <link rel="stylesheet" href="./stylesheet.css" />
   </head>
   <body>
-    <header id="header">
+    <header id="js-header" class="header">
       <div class="header__flex-container">
-        <h1 class="logo">
+        <h1 class="header__logo">
           <img
             src="img/logo.jpg"
             alt="Delicious
@@ -33,38 +33,38 @@
           />
         </h1>
         <div class="sp-navi">
-          <ul>
-            <li>商品紹介</li>
-            <li>店舗一覧</li>
-            <li>採用情報</li>
+          <ul class="sp-navi__list">
+            <li class="sp-navi__item">商品紹介</li>
+            <li class="sp-navi__item">店舗一覧</li>
+            <li class="sp-navi__item">採用情報</li>
           </ul>
           <button id="js-header-button" class="header__button">
-            <span class="text">その他</span>
+            <span class="open">その他</span>
             <span class="close"></span>
           </button>
         </div>
         <div class="pc-navi">
-          <ul>
-            <li>お知らせ</li>
-            <li>商品紹介</li>
-            <li>店舗一覧</li>
-            <li>採用情報</li>
+          <ul class="pc-navi__list">
+            <li class="pc-navi__item">お知らせ</li>
+            <li class="pc-navi__item">商品紹介</li>
+            <li class="pc-navi__item">店舗一覧</li>
+            <li class="pc-navi__item">採用情報</li>
           </ul>
         </div>
       </div>
       <div id="js-sp-menu" class="sp-menu">
-        <ul>
-          <li>
-            <div>お知らせ</div>
-            <img src="img/icon-01.png" alt="" />
+        <ul class="sp-menu__list">
+          <li class="sp-menu__item">
+            <div class="sp-menu__text">お知らせ</div>
+            <img class="sp-menu__img" src="img/icon-01.png" alt="" />
           </li>
-          <li>
-            <div>コラム</div>
-            <img src="img/icon-02.png" alt="" />
+          <li class="sp-menu__item">
+            <div class="sp-menu__text">コラム</div>
+            <img class="sp-menu__img" src="img/icon-02.png" alt="" />
           </li>
-          <li>
-            <div>ピックアップ</div>
-            <img src="img/icon-03.png" alt="" />
+          <li class="sp-menu__item">
+            <div class="sp-menu__text">ピックアップ</div>
+            <img class="sp-menu__img" src="img/icon-03.png" alt="" />
           </li>
         </ul>
         <button class="sp-menu__button--home">トップページ</button>
@@ -75,7 +75,7 @@
     </header>
     <main>
       <div class="mv">
-        <div class="img">
+        <div class="mv__img">
           <img src="img/mv.jpg" alt="" />
         </div>
         <div class="mv__text">美味しくて、"ほっ"とする。</div>

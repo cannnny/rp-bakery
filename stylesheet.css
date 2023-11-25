@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
-header {
+.header {
   height: 70px;
   background-color: #ffffff;
   z-index: 99;
 }
 
 @media screen and (min-width: 1024px) {
-  header {
+  .header {
     height: 180px;
   }
 }
 
-header .header__flex-container {
+.header__flex-container {
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -23,7 +23,7 @@ header .header__flex-container {
 }
 
 @media screen and (min-width: 1024px) {
-  header .header__flex-container {
+  .header__flex-container {
     position: static;
     flex-direction: column;
     padding-top: 25px;
@@ -31,40 +31,18 @@ header .header__flex-container {
   }
 }
 
-header .header__flex-container img {
+.header__logo {
   display: block;
   max-width: 140px;
 }
 
 @media screen and (min-width: 1024px) {
-  header .header__flex-container img {
+  .header__logo {
     max-width: 250px;
   }
 }
 
-header .header__flex-container .sp-navi {
-  display: flex;
-  align-items: center;
-}
-
-@media screen and (min-width: 1024px) {
-  header .header__flex-container .sp-navi {
-    display: none;
-  }
-}
-
-header .header__flex-container .sp-navi ul {
-  display: flex;
-  font-size: 12px;
-  list-style: none;
-  padding-left: 0px;
-}
-
-header .header__flex-container .sp-navi ul li {
-  margin-left: 8px;
-}
-
-header .header__flex-container .sp-navi .header__button {
+.header__button {
   position: relative;
   width: 60px;
   height: 40px;
@@ -76,7 +54,22 @@ header .header__flex-container .sp-navi .header__button {
   cursor: pointer;
 }
 
-header .header__flex-container .sp-navi .header__button .close {
+.header__button.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__button.active .open {
+  display: none;
+}
+
+.header__button.active .close {
+  display: block;
+}
+
+.header__button .close {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -86,7 +79,7 @@ header .header__flex-container .sp-navi .header__button .close {
   display: none;
 }
 
-header .header__flex-container .sp-navi .header__button .close::before, header .header__flex-container .sp-navi .header__button .close::after {
+.header__button .close::before, .header__button .close::after {
   content: "";
   display: block;
   background-color: #ffffff;
@@ -94,51 +87,58 @@ header .header__flex-container .sp-navi .header__button .close::before, header .
   height: 3px;
 }
 
-header .header__flex-container .sp-navi .header__button .close::before {
+.header__button .close::before {
   transform: translateY(13px) rotate(-45deg);
 }
 
-header .header__flex-container .sp-navi .header__button .close::after {
+.header__button .close::after {
   transform: translate(1px, 10px) rotate(45deg);
 }
 
-header .header__flex-container .sp-navi .header__button.active {
+.sp-navi {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-header .header__flex-container .sp-navi .header__button.active .text {
-  display: none;
+@media screen and (min-width: 1024px) {
+  .sp-navi {
+    display: none;
+  }
 }
 
-header .header__flex-container .sp-navi .header__button.active .close {
-  display: block;
+.sp-navi__list {
+  display: flex;
+  font-size: 12px;
+  list-style: none;
+  padding-left: 0px;
 }
 
-header .header__flex-container .pc-navi {
+.sp-navi__item {
+  margin-left: 8px;
+}
+
+.pc-navi {
   display: none;
 }
 
 @media screen and (min-width: 1024px) {
-  header .header__flex-container .pc-navi {
+  .pc-navi {
     display: block;
     margin-top: 10px;
     font-size: 20px;
   }
-  header .header__flex-container .pc-navi ul {
+  .pc-navi__list {
     display: flex;
     justify-content: center;
     padding-left: 0;
     list-style: none;
   }
-  header .header__flex-container .pc-navi ul li + li {
+  .pc-navi__item + .pc-navi__item {
     padding-left: 20px;
   }
 }
 
-header .sp-menu {
+.sp-menu {
   transform: translateX(-100%);
   transition: all 0.5s;
   display: flex;
@@ -154,7 +154,11 @@ header .sp-menu {
   left: 0;
 }
 
-header .sp-menu ul {
+.sp-menu.active {
+  transform: translateX(0%);
+}
+
+.sp-menu__list {
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -165,23 +169,23 @@ header .sp-menu ul {
   text-align: center;
 }
 
-header .sp-menu ul li {
+.sp-menu__item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-header .sp-menu ul li div {
+.sp-menu__text {
   order: 2;
   font-size: 18px;
 }
 
-header .sp-menu ul li img {
+.sp-menu__img {
   order: 1;
   width: 100px;
 }
 
-header .sp-menu button {
+.sp-menu__button--home, .sp-menu__button--close {
   width: 85%;
   height: 40px;
   border-radius: 10%;
@@ -190,15 +194,11 @@ header .sp-menu button {
   font-size: 16px;
 }
 
-header .sp-menu button + button {
+.sp-menu__button--close {
   margin-top: 20px;
   border: 1px solid #fff;
   background-color: #664b30;
   color: #ffffff;
-}
-
-header .sp-menu.active {
-  transform: translateX(0%);
 }
 
 .mv {
@@ -214,11 +214,18 @@ header .sp-menu.active {
   }
 }
 
-.mv .img {
+.mv__img {
   position: relative;
 }
 
-.mv .img::before {
+@media screen and (min-width: 1024px) {
+  .mv__img {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.mv__img::before {
   content: "";
   display: block;
   position: absolute;
@@ -231,14 +238,7 @@ header .sp-menu.active {
   background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 1024px) {
-  .mv .img {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-}
-
-.mv .mv__text {
+.mv__text {
   width: 90%;
   margin: 0 auto;
   padding-top: 10px;
@@ -247,7 +247,7 @@ header .sp-menu.active {
 }
 
 @media screen and (min-width: 1024px) {
-  .mv .mv__text {
+  .mv__text {
     font-size: 40px;
     padding-top: 0;
   }

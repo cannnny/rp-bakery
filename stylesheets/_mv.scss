@@ -8,8 +8,13 @@
     padding: 40px 0;
   }
 
-  .img {
+  &__img {
     position: relative;
+
+    @include mq() {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
     &::before {
       content: "";
@@ -23,14 +28,9 @@
       background-size: cover;
       background-repeat: no-repeat;
     }
-
-    @include mq() {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
   }
 
-  .mv__text {
+  &__text {
     width: 90%;
     margin: 0 auto;
     padding-top: 10px;

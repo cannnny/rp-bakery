@@ -46,7 +46,7 @@ const swiper = new Swiper(".swiper", {
 });
 
 // pageScrollToTop
-const element = document.getElementById("header");
+const element = document.getElementById("js-header");
 const pageScrollToTop = () => {
   element.scrollIntoView({ behavior: "smooth" });
 };
