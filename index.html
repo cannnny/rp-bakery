@@ -147,7 +147,7 @@
         <button class="section__button">記事一覧</button>
       </section>
       <section class="pickup">
-        <h2>Pickup</h2>
+        <h2 class="pickup__header">Pickup</h2>
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -165,35 +165,33 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="footer__wrapper">
-        <div class="footer__memu">
-          <ul>
-            <li>お知らせ</li>
-            <li>商品紹介</li>
-            <li>
-              店舗一覧
-              <ul class="shops">
-                <li>本店</li>
-                <li>▲▲店</li>
-                <li>□□店</li>
-              </ul>
-            </li>
-            <li>採用情報</li>
-          </ul>
-        </div>
+        <ul class="footer__list">
+          <li class="footer__item">お知らせ</li>
+          <li class="footer__item">商品紹介</li>
+          <li class="footer__item">
+            店舗一覧
+            <ul class="footer__list--shop">
+              <li class="footer__item--shop">本店</li>
+              <li class="footer__item--shop">▲▲店</li>
+              <li class="footer__item--shop">□□店</li>
+            </ul>
+          </li>
+          <li class="footer__item">採用情報</li>
+        </ul>
         <div class="contact">
           <div class="contact__map">
             <img src="img/map.png" alt="地図" />
           </div>
-          <div>本社:東京都〇〇区〇〇町〇-〇</div>
-          <div>TEL:〇〇-〇〇〇〇-〇〇〇〇</div>
+          <div class="contact__text">本社:東京都〇〇区〇〇町〇-〇</div>
+          <div class="contact__text">TEL:〇〇-〇〇〇〇-〇〇〇〇</div>
         </div>
       </div>
-      <div class="pageup-button" onclick="pageScrollToTop()">
+      <div class="footer__button--pagetop" onclick="pageScrollToTop()">
         <img src="img/pageup-button.png" alt="" />
       </div>
-      <div class="copyright">- copyright area -</div>
+      <div class="footer__copyright">- copyright area -</div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
